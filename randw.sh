@@ -54,11 +54,3 @@ do
     eval tail -n "$lineno" \$files_$random_index | head -n 1
     i=$((i+1))
 done
-
-exit
-script=$(echo $lines | tr ' ' '\n' |
-    sort -n                        |
-    sed ':a ; N ; ${s/\n/p ;/g ; s/$/\{p;q\}/ } ; ba ')
-
-wc=$(wc -l /usr/share/dict/russian | cut -f1 -d' ')
-$(( $rand % %wc ))
