@@ -1,0 +1,7 @@
+Usage: ./randw [-n <number>] FILE...
+
+
+Generate random words using a dictionary file(s) FILE...
+
+Options:
+-n - specify the amount of words to generate
